@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>to-do-list</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body class="boddy">
+
+<!--? -------------------------------------- -->
+<script src="./code.js"></script>
+<!--? -------------------------------------- -->
+
+<header>
+  <div class="flex">
+      <div  class="header_title" >
+        <h1>TODO-LIST</h1>
+      </div>
+  </div>
+</header>
+
+
+<main class="main_div" >
+    <input type="text" class="New_activity" name="New_activity"
+      placeholder=" Digite e adicione uma nova tarefa" onkeypress="validate(event); clearInput();" id="add">
+     <button class="submit_button"  id="add_submit" onclick="new_task(); limpar(); complete_task();"   type="submit"> Adicionar Task </button>
+
+  <div class="div_tasks" id="tasks"  >
+    <div class="divider" ></div>
+  </div>
+  
+
+
+</main>
+
+
+  <footer>
+
+
+    
+  </footer>
+
+  
+</body>
+</html>

@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+body{
+    font-family: 'Lato', sans-serif;
+}
+
+.Div_full{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+
+
+.Actual_balance{
+
+    width: fit-content;
+    position: relative;
+    
+
+}
+
+.align{
+    
+    position: relative;
+    right: 6%;
+    
+}
+
+
+.balance{
+
+    color: blue;
+    font-size: 30px;
+    position: relative;
+    bottom: 20px;
+    
+}
+
+
+
+.revenue_expense {
+    align-self: inherit;
+    display: flex;
+    flex-direction: row;
+    height: 10%;
+    width: 100%;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(199, 199, 199);
+    justify-content: center;
+
+    
+}
+
+
+.revenue{
+
+    
+    margin-right: 40px;
+
+}
+
+.revenue h4{
+
+    color: green;
+
+}
+
+.revenue_descont h4{
+
+    color: red;
+
+}
+
+.health_plan{
+
+    margin-top: 13px;
+    margin-bottom: 40px;
+}
+
+.transaction{
+
+    border-width: 1px;
+    border-style: solid;
+    border-color: green;
+    height: 30px;  
+    border-radius: 2px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-right: 10px, solid, green;
+    border-right-width: 5px;
+}
+
+.transaction 
+
+
+
+.add_transaction{
+
+    margin-bottom: 20px;
+}
+
+.transaction_name{
+
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    width: 10%;
+    margin-bottom: 40px;
+
+}
+
+.transaction_name input {
+    margin-top: 7px;
+    width: 300px;
+    height: 30px;
+    border-radius: 4px;
+    border-width: 1px;
+
+
+}
+
+.transaction_value{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 10%;
+    margin-bottom: 20px;
+}
+
+
+.transaction_value input{
+
+    margin-top: 7px;
+    width: 300px;
+    height: 30px;
+    border-radius: 4px;
+    border-width: 1px;
+
+
+}
+
+
+.button_submit{
+
+   height: 30px;
+   width: 100%;
+   border-radius: 5px;
+   background-color: rgb(190, 144, 233); 
+
+}
+
+
+
