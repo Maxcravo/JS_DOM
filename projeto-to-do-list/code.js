@@ -1,6 +1,9 @@
 function completed_task() {
 
+  
+  
   let element = document.getElementById("1")
+
   console.log(element.id);
   let complete = document.getElementById("complete_tasks");
   console.log(complete.checked);
@@ -39,12 +42,20 @@ function new_task() {
   
   let new_task_item = document.createTextNode(new_task);
   new_task_div.appendChild(new_element);
-  new_element.appendChild(new_task_item)
-  new_element.appendChild(complete_task)
+  new_element.appendChild(new_task_item);
+  new_element.appendChild(complete_task);
 
+  // pegar o tamanho atual das tasks e usar esse valor para atribuir como ID em cada task
+  let test = document.querySelectorAll("li").length
+  console.log(test);
+
+  // pegar cada task e atribuir o valor vindo do tamanho da mesma ao seu id
+  // podendo depois acessar esse id individualmente para cada task
+  let aaa = new_element.querySelectorAll("li");
+  
   
 
-  // completed_task();
+  completed_task();
 
 }
 /* função que vai remover o indicador de lista caso não seja criado uma
