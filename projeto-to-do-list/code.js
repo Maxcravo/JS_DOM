@@ -1,7 +1,6 @@
 function completed_task() {
 
-  
-  
+
   let element = document.getElementById("1")
 
   console.log(element.id);
@@ -10,7 +9,6 @@ function completed_task() {
     if (complete.checked == true) {
       element.style.color = "red"
     }
-  
 }
 
 
@@ -46,8 +44,18 @@ function new_task() {
   new_element.appendChild(complete_task);
 
   // pegar o tamanho atual das tasks e usar esse valor para atribuir como ID em cada task
-  let test = document.querySelectorAll("li").length
+  let test = document.querySelectorAll("li")
   console.log(test);
+
+for (let k = 0; k < test.length; k++) {
+    new_element.id = k
+    console.log(new_element.id);
+      for (let i = 0; i < test.length; i++) { 
+        complete_task.id = k
+        console.log("ss");
+      }
+}
+
 
   // pegar cada task e atribuir o valor vindo do tamanho da mesma ao seu id
   // podendo depois acessar esse id individualmente para cada task
