@@ -1,15 +1,23 @@
 function completed_task() {
 
+  let element = document.querySelectorAll('input[type=checkbox]');
 
-  let element = document.getElementById("1")
-
-  console.log(element.id);
-  let complete = document.getElementById("complete_tasks");
-  console.log(complete.checked);
-    if (complete.checked == true) {
-      element.style.color = "red"
-    }
+    for (let k = 0; k < element.length; k++) {
+      element[k].addEventListener("click", function(){
+        if (element[k].checked == true) {
+          console.log('teste');
+      };
+    })
+  }
 }
+
+  // console.log(element.id);
+  // let complete = document.getElementById("complete_tasks");
+  // console.log(complete.checked);
+  //   if (complete.checked == true) {
+  //     element.style.color = "red"
+  //   }
+
 
 
 function new_task() {
@@ -64,10 +72,11 @@ for (let k = 0; k < test.length; k++) {
   
 
   completed_task();
-
+  return new_task_item
 }
 /* função que vai remover o indicador de lista caso não seja criado uma
 task */
+
 
 
 
