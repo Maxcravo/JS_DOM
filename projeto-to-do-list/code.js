@@ -5,8 +5,15 @@ function completed_task() {
     for (let k = 0; k < element.length; k++) {
       element[k].addEventListener("click", function(){
         if (element[k].checked == true) {
-          console.log('teste');
-      };
+          document.getElementsByTagName('li').item(k).style.color = "red";
+          document.getElementsByTagName('li').item(k).style.textDecoration = "line-through";
+          
+      }
+      if (element[k].checked == false) {
+        document.getElementsByTagName('li').item(k).style.color = "black";
+        document.getElementsByTagName('li').item(k).style.textDecoration = "none";
+
+      }
     })
   }
 }
