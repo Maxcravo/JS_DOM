@@ -2,34 +2,32 @@ function completed_task() {
 
   let element = document.querySelectorAll('input[type=checkbox]');
 
-    for (let k = 0; k < element.length; k++) {
-      element[k].addEventListener("click", function(){
-        if (element[k].checked == true) {
-          document.getElementsByTagName('li').item(k).style.color = "red";
-          document.getElementsByTagName('li').item(k).style.textDecoration = "line-through";
-          
+  for (let k = 0; k < element.length; k++) {
+    element[k].addEventListener("click", function() {
+      if (element[k].checked == true) {
+        document.getElementsByTagName('li').item(k).style.color = "red";
+        document.getElementsByTagName('li').item(k).style.textDecoration = "line-through";
       }
       if (element[k].checked == false) {
         document.getElementsByTagName('li').item(k).style.color = "black";
         document.getElementsByTagName('li').item(k).style.textDecoration = "none";
-
       }
     })
   }
 }
 
-  // console.log(element.id);
-  // let complete = document.getElementById("complete_tasks");
-  // console.log(complete.checked);
-  //   if (complete.checked == true) {
-  //     element.style.color = "red"
-  //   }
+// console.log(element.id);
+// let complete = document.getElementById("complete_tasks");
+// console.log(complete.checked);
+//   if (complete.checked == true) {
+//     element.style.color = "red"
+//   }
 
 
 
 function new_task() {
 
-  let create_elementos = [];
+
 
   let new_task = document.getElementById("add").value;
   // console.log(new_task);
@@ -39,20 +37,11 @@ function new_task() {
   let new_element = document.createElement("li")
   let list = document.createElement("ul")
 
-
-// for (let i = 0; index < array.length; index++) {
-
-//   for (i; create_elementos < i.length; i++) {
-//     new_element.id = create_elementos[i]
-    
-//   }
-// }
-
   let complete_task = document.createElement("input");
   complete_task.type = "checkbox"
   complete_task.id = "complete_tasks"
 
-  
+
   let new_task_item = document.createTextNode(new_task);
   new_task_div.appendChild(new_element);
   new_element.appendChild(new_task_item);
@@ -62,21 +51,20 @@ function new_task() {
   let test = document.querySelectorAll("li")
   console.log(test);
 
-for (let k = 0; k < test.length; k++) {
+  for (let k = 0; k < test.length; k++) {
     new_element.id = k
     console.log(new_element.id);
-      for (let i = 0; i < test.length; i++) { 
-        complete_task.id = k
-        console.log("ss");
-      }
-}
+    for (let i = 0; i < test.length; i++) {
+      complete_task.id = k
+      console.log("ss");
+    }
+  }
 
 
   // pegar cada task e atribuir o valor vindo do tamanho da mesma ao seu id
   // podendo depois acessar esse id individualmente para cada task
-  let aaa = new_element.querySelectorAll("li");
-  
-  
+
+
 
   completed_task();
   return new_task_item
@@ -96,9 +84,9 @@ function validate(e) {
 }
 
 function clearInput() {
-  let button = document.getElementById("add_submit");
+
   let input = document.getElementById("add");
-  if (event.key === "Enter" ) {
+  if (event.key === "Enter") {
     input.value = ""
   }
 }
@@ -107,10 +95,10 @@ function clearInput() {
 function limpar() {
   let input = document.getElementById("add");
   let button = document.getElementById("add_submit")
-  button.addEventListener("click",input.value = "" )
+  button.addEventListener("click", input.value = "")
 }
-  
-  
+
+
 
 
 
