@@ -35,11 +35,11 @@ function new_task() {
   let new_task_div = document.getElementById("tasks");
 
   let new_element = document.createElement("li")
-  let list = document.createElement("ul")
+  let list = document.createElement("ul");
 
   let complete_task = document.createElement("input");
-  complete_task.type = "checkbox"
-  complete_task.id = "complete_tasks"
+  complete_task.type = "checkbox";
+  complete_task.id = "complete_tasks";
 
 
   let new_task_item = document.createTextNode(new_task);
