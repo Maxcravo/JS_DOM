@@ -16,18 +16,7 @@ function completed_task() {
   }
 }
 
-// console.log(element.id);
-// let complete = document.getElementById("complete_tasks");
-// console.log(complete.checked);
-//   if (complete.checked == true) {
-//     element.style.color = "red"
-//   }
-
-
-
 function new_task() {
-
-
 
   let new_task = document.getElementById("add").value;
   // console.log(new_task);
