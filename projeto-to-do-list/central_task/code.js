@@ -1,3 +1,5 @@
+
+
 function completed_task() {
 
   let element = document.querySelectorAll('input[type=checkbox]');
@@ -15,6 +17,13 @@ function completed_task() {
     })
   }
 }
+/*
+function get_task() {
+  let task_name = document.getElementById("add_submit").value;
+  localStorage.setItem("textvalue", task_name);
+
+}
+*/
 
 function redirect() {
 
@@ -22,8 +31,18 @@ function redirect() {
 
   for (let k = 0; k < element.length; k++) {
     element[k].addEventListener("click", function() {
-      window.location.replace("http://127.0.0.1:5500/projeto-to-do-list/task_page/Task_page.html")
+      task_value = document.getElementsByTagName('li').item(k) 
+      
 
+      localStorage.setItem("task", task_value);
+      location.href = "../task_page/Task_page.html";
+      // console.log(task_value);
+
+      let test = localStorage.getItem("task");
+      console.log(test);
+
+
+      window.location.replace("http://127.0.0.1:5500/projeto-to-do-list/task_page/Task_page.html")
     })
   }
 }
@@ -92,8 +111,5 @@ function limpar() {
   let button = document.getElementById("add_submit")
   button.addEventListener("click", input.value = "")
 }
-
-
-
 
 
