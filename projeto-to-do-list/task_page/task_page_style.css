@@ -1,5 +1,29 @@
-body{
-
-  background-color: skyblue;
-
+@font-face {
+  font-family: 'Roboto';
+  src: url('roboto.eot'); /* IE9 Compat Modes */
+  src: url('roboto.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('roboto.woff') format('woff'), /* Modern Browsers */
+  url('roboto.ttf')  format('truetype'), /* Safari, Android, iOS */
+  url('roboto.svg#svgFontName') format('svg'); /* Legacy iOS */
 }
+
+body{
+  background-color: skyblue;
+  font-family: 'Roboto', sans-serif;
+}
+
+.text_div{
+  margin: 10px;
+  width: 35%;
+  height: 300px;
+  border-style:solid;
+  border-width: 2px;
+  border-color: black;
+  border-radius: 8px;
+  padding-left: 25px;
+  font-size: 14px;
+  
+}
+
+
+
