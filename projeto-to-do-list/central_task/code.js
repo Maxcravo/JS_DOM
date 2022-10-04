@@ -1,5 +1,6 @@
 
 
+
 function completed_task() {
 
   let element = document.querySelectorAll('input[type=checkbox]');
@@ -14,7 +15,7 @@ function completed_task() {
         document.getElementsByTagName('li').item(k).style.color = "black";
         document.getElementsByTagName('li').item(k).style.textDecoration = "none";
       }
-   })
+    })
   }
 }
 
@@ -26,26 +27,23 @@ function get_task() {
 }
 */
 
-// function redirect() {
+function redirect() {
 
-//   let element = document.querySelectorAll('li');
+  let element = document.querySelectorAll('li');
 
-//   for (let k = 0; k < element.length; k++) {
-//     element[k].addEventListener("click", function() {
-//       task_value = document.getElementsByTagName('li').item(k);
+  for (let k = 0; k < element.length; k++) {
+    element[k].addEventListener("click", function() {
+      let task_value = document.getElementsByTagName('li').item(k).textContent;
+      // console.log(task_value)
+      localStorage.setItem(task_value, task_value);
 
-//       localStorage.setItem("task", task_value);
-//       location.href = "../task_page/Task_page.html";
-//       // console.log(task_value);
-
-//       let test = localStorage.getItem("task");
-//       console.log(test);
+    })
+  }
+  let test = localStorage.getItem("task");
 
 
-//       window.location.replace("http://127.0.0.1:5500/projeto-to-do-list/task_page/Task_page.html")
-//     })
-//   }
-// }
+  console.log(test)
+}
 
 function new_task() {
 
