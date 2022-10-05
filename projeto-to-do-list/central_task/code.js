@@ -31,18 +31,18 @@ function redirect() {
 
   let element = document.querySelectorAll('li');
 
+
   for (let k = 0; k < element.length; k++) {
     element[k].addEventListener("click", function() {
       let task_value = document.getElementsByTagName('li').item(k).textContent;
       // console.log(task_value)
-      localStorage.setItem(task_value, task_value);
-
+      localStorage.setItem("task_storage", task_value);
+      let test = localStorage.getItem("task_storage");
+      console.log(test)
     })
   }
-  let test = localStorage.getItem("task");
 
 
-  console.log(test)
 }
 
 function new_task() {
